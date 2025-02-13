@@ -1,7 +1,3 @@
-class NotWearingMaskError(Exception):
-    pass
-
-
 class VaccineError(Exception):
     pass
 
@@ -11,4 +7,8 @@ class NotVaccinatedError(VaccineError):
 
 
 class OutdatedVaccineError(VaccineError):
+    pass
+
+
+class NotWearingMaskError(Exception):
     pass

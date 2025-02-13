@@ -1,11 +1,12 @@
 from __future__ import annotations
+
 from app.cafe import Cafe
-from app.errors import VaccineError, NotWearingMaskError
+from app.errors import (NotWearingMaskError, VaccineError)
 
 
 def go_to_cafe(friends: list[dict], cafe: Cafe) -> str:
     masks_to_buy = 0
-    for i, friend in enumerate(friends):
+    for friend in friends:
         try:
             cafe.visit_cafe(friend)
         except VaccineError:
